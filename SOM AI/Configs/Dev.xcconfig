@@ -1,0 +1,13 @@
+//
+//  Dev.xcconfig
+//  SOM AI
+//
+//  Created by Bagas Ilham on 06/11/2023.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_DOMAIN = https:/$()/staging.ottencoffee.com
+BASE_API_URL = https:/$()/staging-api.ottencoffee.com
+CALLBACK_URL = staging.ottencoffee.com
