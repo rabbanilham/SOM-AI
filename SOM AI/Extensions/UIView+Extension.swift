@@ -82,4 +82,16 @@ extension UIView {
             completion: completion
         )
     }
+    
+    func bounceEffect() {
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveLinear, animations: {
+            self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        }, completion: { isComplete in
+            if isComplete {
+                UIView.animate(withDuration: 0.9, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
+                    self.transform = CGAffineTransform(scaleX: 1, y: 1)
+                }, completion: nil)
+            }
+        })
+    }
 }

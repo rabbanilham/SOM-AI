@@ -21,6 +21,8 @@ final class LandingPageFifthView: UIView {
     
     // MARK: - UI Properties -
     
+    private let feedbackGenerator = UINotificationFeedbackGenerator()
+    
     private lazy var mainContainerView: UIView = {
         let view = UIView()
         view.backgroundColor = R.color.backgroundWhite()
@@ -107,7 +109,7 @@ private extension LandingPageFifthView {
     func makeUI() {
         addSubview(mainContainerView)
         mainContainerView.snp.makeConstraints({ $0.edges.equalToSuperview() })
-//        testimonySection.reloadData()
+        feedbackGenerator.prepare()
     }
 }
 
@@ -132,5 +134,9 @@ extension LandingPageFifthView: UICollectionViewDelegate, UICollectionViewDataSo
         return cell
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let cell = collectionView.cellForItem(at: indexPath) as? TestimonyCollectionViewCell else { return }
+        cell.frameView.bounceEffect()
+        feedbackGenerator.notificationOccurred(.error)
+    }
 }
