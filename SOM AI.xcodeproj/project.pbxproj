@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3822D5002B0210A900783DB5 /* LandingPageSeventhView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3822D4FF2B0210A900783DB5 /* LandingPageSeventhView.swift */; };
+		382E92822AFE6B0100AA7C93 /* LandingPageSixthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382E92812AFE6B0100AA7C93 /* LandingPageSixthView.swift */; };
 		384C136B2AF9505B00DCC14A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 384C136A2AF9505B00DCC14A /* Kingfisher */; };
+		384CBBF82AFE736400CC6966 /* FrequentlyAskedQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384CBBF72AFE736400CC6966 /* FrequentlyAskedQuestion.swift */; };
 		389C8DEB2AF954BC005F9A99 /* RswiftLibrary in Frameworks */ = {isa = PBXBuildFile; productRef = 389C8DEA2AF954BC005F9A99 /* RswiftLibrary */; };
 		389C8DF72AF9622D005F9A99 /* LandingPageSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389C8DF62AF9622D005F9A99 /* LandingPageSceneViewController.swift */; };
 		389C8DFE2AF963A2005F9A99 /* DefaultCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389C8DFD2AF963A2005F9A99 /* DefaultCollectionView.swift */; };
@@ -56,6 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3822D4FF2B0210A900783DB5 /* LandingPageSeventhView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageSeventhView.swift; sourceTree = "<group>"; };
+		382E92812AFE6B0100AA7C93 /* LandingPageSixthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageSixthView.swift; sourceTree = "<group>"; };
+		384CBBF72AFE736400CC6966 /* FrequentlyAskedQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrequentlyAskedQuestion.swift; sourceTree = "<group>"; };
 		389C8DF62AF9622D005F9A99 /* LandingPageSceneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageSceneViewController.swift; sourceTree = "<group>"; };
 		389C8DFD2AF963A2005F9A99 /* DefaultCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCollectionView.swift; sourceTree = "<group>"; };
 		389C8E022AF9674B005F9A99 /* LandingPageFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageFirstView.swift; sourceTree = "<group>"; };
@@ -130,6 +136,8 @@
 				389C8E332AFC0DC3005F9A99 /* LandingPageThirdView.swift */,
 				389C8E362AFD0CB1005F9A99 /* LandingPageFourthView.swift */,
 				389C8E392AFD1A78005F9A99 /* LandingPageFifthView.swift */,
+				382E92812AFE6B0100AA7C93 /* LandingPageSixthView.swift */,
+				3822D4FF2B0210A900783DB5 /* LandingPageSeventhView.swift */,
 			);
 			path = LandingPageSection;
 			sourceTree = "<group>";
@@ -267,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				389C8E452AFD429E005F9A99 /* Testimony.swift */,
+				384CBBF72AFE736400CC6966 /* FrequentlyAskedQuestion.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -479,6 +488,7 @@
 				389C8E2D2AFBEF8E005F9A99 /* UILabel+Extension.swift in Sources */,
 				389C8E372AFD0CB1005F9A99 /* LandingPageFourthView.swift in Sources */,
 				389C8E3E2AFD2D62005F9A99 /* ScaledCollectionViewLayout.swift in Sources */,
+				384CBBF82AFE736400CC6966 /* FrequentlyAskedQuestion.swift in Sources */,
 				389C8DFE2AF963A2005F9A99 /* DefaultCollectionView.swift in Sources */,
 				389C8E052AF96A88005F9A99 /* UIStackView+Extension.swift in Sources */,
 				389C8E462AFD429E005F9A99 /* Testimony.swift in Sources */,
@@ -488,6 +498,8 @@
 				38AEB6AB2AF8B85B00E87009 /* SceneDelegate.swift in Sources */,
 				389C8DF72AF9622D005F9A99 /* LandingPageSceneViewController.swift in Sources */,
 				389C8E342AFC0DC3005F9A99 /* LandingPageThirdView.swift in Sources */,
+				382E92822AFE6B0100AA7C93 /* LandingPageSixthView.swift in Sources */,
+				3822D5002B0210A900783DB5 /* LandingPageSeventhView.swift in Sources */,
 				38AEB6B32AF8B85B00E87009 /* SOM_AI.xcdatamodeld in Sources */,
 				389C8E5A2AFD53ED005F9A99 /* ShadowTableViewCell.swift in Sources */,
 				389C8E272AFBEA45005F9A99 /* LandingPageSecondView.swift in Sources */,

@@ -64,11 +64,19 @@ final class LandingPageSceneViewController: UIViewController {
         return collectionView
     }()
     
+    private lazy var landingViews = [firstView, secondView, thirdView, fourthView, fifthView, sixthView, seventhView]
     private lazy var firstView = LandingPageFirstView()
     private lazy var secondView = LandingPageSecondView()
     private lazy var thirdView = LandingPageThirdView()
     private lazy var fourthView = LandingPageFourthView()
     private lazy var fifthView = LandingPageFifthView()
+    private lazy var sixthView: LandingPageSixthView = {
+        let view = LandingPageSixthView()
+        view.delegate = self
+        
+        return view
+    }()
+    private lazy var seventhView = LandingPageSeventhView()
     
     private lazy var pageControl: UIPageControl = {
         let control = UIPageControl()
@@ -113,56 +121,18 @@ final class LandingPageSceneViewController: UIViewController {
 
 extension LandingPageSceneViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return landingViews.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let item = indexPath.item
+        let row = indexPath.row
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "landingPageCell", for: indexPath)
         cell.contentView.subviews.forEach({ $0.removeFromSuperview() })
-        switch item {
-        case 0: 
-            if cell.contentView.subviews.isEmpty {
-                cell.contentView.addSubview(firstView)
-                firstView.snp.makeConstraints { make in
-                    make.edges.equalToSuperview()
-                }
+        if cell.contentView.subviews.isEmpty {
+            cell.contentView.addSubview(landingViews[row])
+            landingViews[row].snp.makeConstraints { make in
+                make.edges.equalToSuperview()
             }
-            
-        case 1:
-            if cell.contentView.subviews.isEmpty {
-                cell.contentView.addSubview(secondView)
-                secondView.snp.makeConstraints { make in
-                    make.edges.equalToSuperview()
-                }
-            }
-            
-        case 2:
-            if cell.contentView.subviews.isEmpty {
-                cell.contentView.addSubview(thirdView)
-                thirdView.snp.makeConstraints { make in
-                    make.edges.equalToSuperview()
-                }
-            }
-            
-        case 3:
-            if cell.contentView.subviews.isEmpty {
-                cell.contentView.addSubview(fourthView)
-                fourthView.snp.makeConstraints { make in
-                    make.edges.equalToSuperview()
-                }
-            }
-            
-        case 4:
-            if cell.contentView.subviews.isEmpty {
-                cell.contentView.addSubview(fifthView)
-                fifthView.snp.makeConstraints { make in
-                    make.edges.equalToSuperview()
-                }
-            }
-            
-        default:
-            cell.backgroundColor = R.color.backgroundError()
         }
         
         return cell
@@ -175,6 +145,14 @@ extension LandingPageSceneViewController: UICollectionViewDelegate, UICollection
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
+    }
+}
+
+// MARK: - LandingPageSixthViewDelegate -
+
+extension LandingPageSceneViewController: LandingPageSixthViewDelegate {
+    func didTapFooterLink(urlString: String) {
+        //
     }
 }
 
