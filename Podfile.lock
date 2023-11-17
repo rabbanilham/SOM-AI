@@ -1,0 +1,46 @@
+PODS:
+  - CenteredCollectionView (2.2.2)
+  - Kingfisher (7.10.0)
+  - R.swift (7.3.2)
+  - RxCocoa (6.6.0):
+    - RxRelay (= 6.6.0)
+    - RxSwift (= 6.6.0)
+  - RxRelay (6.6.0):
+    - RxSwift (= 6.6.0)
+  - RxSwift (6.6.0)
+  - SnapKit (5.6.0)
+  - SwiftEntryKit (2.0.0)
+
+DEPENDENCIES:
+  - CenteredCollectionView (= 2.2.2)
+  - Kingfisher (~> 7.10)
+  - R.swift (= 7.3.2)
+  - RxCocoa (= 6.6.0)
+  - RxSwift (= 6.6.0)
+  - SnapKit (~> 5.6.0)
+  - SwiftEntryKit (= 2.0.0)
+
+SPEC REPOS:
+  trunk:
+    - CenteredCollectionView
+    - Kingfisher
+    - R.swift
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SnapKit
+    - SwiftEntryKit
+
+SPEC CHECKSUMS:
+  CenteredCollectionView: a9217908a698c386cbb98af11b596da48900b908
+  Kingfisher: a18f05d3b6d37d8650ee4a3e61d57a28fc6207f6
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  RxCocoa: 44a80de90e25b739b5aeaae3c8c371a32e3343cc
+  RxRelay: 45eaa5db8ee4fb50e5ebd57deec0159e97fa51e6
+  RxSwift: a4b44f7d24599f674deebd1818eab82e58410632
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftEntryKit: 61b5fa36f34a97dd8013e48a7345bc4c4720be9a
+
+PODFILE CHECKSUM: 784758bb3566cf2d8a60fe8436d24d1c860e529e
+
+COCOAPODS: 1.12.1

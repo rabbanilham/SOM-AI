@@ -95,7 +95,6 @@ final class LandingPageSceneViewController: UIViewController {
         view.backgroundColor = R.color.backgroundWhite()
         view.addSubview(registerButton)
         registerButton.snp.makeConstraints { make in
-            make.height.equalTo(48)
             make.top.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
             make.bottom.equalTo(view.layoutMarginsGuide.snp.bottom)
@@ -107,9 +106,19 @@ final class LandingPageSceneViewController: UIViewController {
     private lazy var registerButton: FloatingButtonView = {
         let button = FloatingButtonView()
         button.setTitle("Daftar Sekarang")
+        button.addAction {
+            self.navigateToLoginView()
+        }
         
         return button
     }()
+    
+    // MARK: - Lifecycle -
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -160,9 +169,13 @@ extension LandingPageSceneViewController: LandingPageSixthViewDelegate {
 
 private extension LandingPageSceneViewController {
     func makeUI() {
-        navigationController?.isNavigationBarHidden = true
-        
         view.addSubview(mainContainerView)
         mainContainerView.snp.makeConstraints({ $0.edges.equalToSuperview() })
+    }
+    
+//    @objc
+    func navigateToLoginView() {
+        let wireframe = LoginSceneWireframe()
+        navigationController?.pushWireframe(wireframe)
     }
 }

@@ -8,6 +8,8 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
+#include "Pods/Target Support Files/Pods-SOM AI/Pods-SOM AI.debug (dev).xcconfig"
+
 BASE_DOMAIN = https:/$()/staging.ottencoffee.com
 BASE_API_URL = https:/$()/staging-api.ottencoffee.com
 CALLBACK_URL = staging.ottencoffee.com
